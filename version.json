@@ -1,85 +1,8 @@
 {
   "services": [
     {
-      "main_icon": "cloud_upload_outlined",
-      "main_title": "Web-FTP Service",
-      "main_description": "Secure file transfer protocol over web interface",
-      "service_path": "Release/ftp_test.exe",
-      "is_beta": false,
-      "created_by": "Shrey113",
-      "app_version": "1.5",
-      "update_key": "FTP_app_V",
-      "version_url": "https://github.com/Shrey113/flutter_app_updates/raw/main/releases/FTPApp.zip",
-      "sub_components": [
-        {
-          "icon": "language",
-          "title": "Web Interface",
-          "description": "Access your files through any web browser on your network. The web interface provides an intuitive file explorer with drag-and-drop support for easy file management."
-        },
-        {
-          "icon": "folder_shared",
-          "title": "FTP Server",
-          "description": "Built-in FTP server allows you to transfer files using any FTP client. Perfect for bulk transfers and automated synchronization with your device."
-        }
-      ],
-      "last_section": {
-        "title": "How it works",
-        "description": "Web-FTP Service combines the convenience of web access with the power of FTP protocol. Share files between your device and computer without cables or complex setup. Simply start the service and access your files through your preferred method."
-      }
-    },
-    {
-      "main_icon": "devices_other",
-      "main_title": "Find Devices",
-      "main_description": "Discover Android devices on your local network",
-      "service_path": "Release/ftp_test.exe",
-      "is_beta": true,
-      "created_by": "Shrey113",
-      "app_version": "1.6",
-      "update_key": "Device_finder_V",
-      "version_url": "https://github.com/Shrey113/flutter_app_updates/raw/main/releases/FTPApp.zip",
-      "sub_components": [
-        {
-          "icon": "wifi",
-          "title": "Network Scanner",
-          "description": "Automatically scan your local network to find Android devices. Works with any device connected to your WiFi network."
-        },
-        {
-          "icon": "phone_android",
-          "title": "Device Discovery",
-          "description": "Get detailed information about found devices including IP address, manufacturer, and model name."
-        }
-      ],
-      "last_section": {
-        "title": "How it works",
-        "description": "The device finder uses network discovery protocols to locate Android devices on your local network. Once found, you can easily connect to them for file transfers or remote control."
-      }
-    },
-    {
-      "main_icon": "screen_share_outlined",
-      "main_title": "File Converter",
-      "main_description": "Convert files to any format",
-      "service_path": "Release/ftp_test.exe",
-      "is_temporarily_disabled": true,
-      "disabled_reason": "Coming in next update",
-      "created_by": "PraharshPatni13",
-      "app_version": "1.4",
-      "update_key": "File_converter_V",
-      "version_url": "https://github.com/Shrey113/flutter_app_updates/raw/main/releases/FTPApp.zip" ,
-      "sub_components": [
-        {
-          "icon": "cast",
-          "title": "Convert files to any format",
-          "description": "Convert files to any format with ease. Perfect for presentations and demonstrations."
-        },
-        {
-          "icon": "settings_brightness",
-          "title": "Convert files to any format",
-          "description": "Convert files to any format with ease. Perfect for presentations and demonstrations."
-        }
-      ],
-      "last_section": {
-        "title": "Coming Soon",
-        "description": "File converter service is currently in beta testing. Experience real-time file conversion with audio support and touch input forwarding capabilities."
+      "Adb-Device-Manager": {
+        "Android-Dex-Resize-Tool": "V1.0"
       }
     }
   ]
