@@ -4,7 +4,7 @@ import io
 from pathlib import Path
 
 # ---------------- CONFIG ----------------
-VERSION_URL = "https://raw.githubusercontent.com/Shrey113/flutter_app_updates/main/version.json"
+VERSION_URL = "https://shrey113.github.io/flutter_app_updates/version.json"
 APP_NAME = "Adb-Device-Manager"
 
 BASE_DIR = Path.home() / "ADBDeviceManager"
