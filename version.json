@@ -3,6 +3,8 @@
     "latest_version": "1.0.0",
     "zip_name": "Android-Dex-Resize-Tool.zip",
     "size": 88521675,
-    "download_url": "https://raw.githubusercontent.com/Shrey113/flutter_app_updates/main/Adb-Device-Manager/Android-Dex-Resize-Tool.zip"
+    "download_url": "https://raw.githubusercontent.com/Shrey113/flutter_app_updates/main/Adb-Device-Manager/Android-Dex-Resize-Tool.zip",
+    "after_extract_name": "Android-Dex-Resize-Tool",
+    "after_extract_exe_path": "./Android-Dex-Resize-Tool/app/scrcpy.exe"
   }
 }
