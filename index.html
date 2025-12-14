@@ -2,13 +2,122 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADB Device Manager – Updates</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="images/app_png_100.png">
 </head>
 
 <body>
-    <h1>hello</h1>
+    <div class="background-effects">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <img src="images/app_png_100.png" alt="Logo">
+                </div>
+                <h1>ADB Device Manager</h1>
+            </div>
+            <p>Official Update & Download Service</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="content" class="grid-container">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Fetching latest updates...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 ADB Device Manager</p>
+        <span class="separator">•</span>
+        <p>Auto-generated from version.json</p>
+    </footer>
+
+    <script>
+        const VERSION_URL = "version.json";
+        const container = document.getElementById("content");
+
+        fetch(VERSION_URL)
+            .then(res => res.json())
+            .then(data => {
+                container.innerHTML = "";
+
+                Object.entries(data).forEach(([appName, info], index) => {
+                    const sizeMB = (info.size / (1024 * 1024)).toFixed(1);
+                    const title = info.title || appName.replace(/-/g, ' ');
+                    const description = info.description || "No description available.";
+                    const version = info.latest_version || "Unknown";
+
+                    // Add staggered animation delay
+                    const delay = index * 100;
+
+                    const card = document.createElement("div");
+                    card.className = "card";
+                    card.style.animationDelay = `${delay}ms`;
+
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <div class="app-icon">
+                                <span>${title.charAt(0).toUpperCase()}</span>
+                            </div>
+                            <div class="app-info">
+                                <h2>${title}</h2>
+                                <div class="badges">
+                                    <span class="badge version-badge">v${version}</span>
+                                    <span class="badge size-badge">${sizeMB} MB</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="description">${description}</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a class="btn btn-primary" href="${info.download_url}" target="_blank" rel="noopener noreferrer">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download .ZIP
+                            </a>
+                        </div>
+                    `;
+
+                    container.appendChild(card);
+                });
+            })
+            .catch(err => {
+                container.innerHTML = `
+                    <div class="error-state">
+                        <p>Failed to load version data.</p>
+                        <small>${err.message}</small>
+                    </div>
+                `;
+                console.error(err);
+            });
+    </script>
+
 </body>
 
 </html>

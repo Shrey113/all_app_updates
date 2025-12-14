@@ -1,6 +1,8 @@
 {
   "Adb-Device-Manager": {
     "latest_version": "1.0.0",
+    "title": "Android Dex Resize Tool",
+    "description": "Resize your Android dex Apps easily with this tool for same as Samsung dex UI",
     "zip_name": "Android-Dex-Resize-Tool.zip",
     "size": 88521675,
     "download_url": "https://raw.githubusercontent.com/Shrey113/flutter_app_updates/main/Adb-Device-Manager/Android-Dex-Resize-Tool.zip",
